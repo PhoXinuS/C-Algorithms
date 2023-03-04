@@ -1,0 +1,30 @@
+Uwaga: Złożoność funkcji init powinna być w najgorszym razie O(|X|log2|X|)
+.
+
+Twoim zadaniem jest zaimplementowanie struktury danych umożliwiającej efektywne odpowiadanie na określone zapytania dotyczące ciągu liczb X.
+
+Dla ustalonego ciągu X=x0,x1,…,xn−1
+ interesuje nas funkcja:
+
+nextInRange(i, [a, b]) 
+
+która wyznacza najmniejszy indeks j taki, że j≥i
+ oraz xj∈[a,b]
+. Jeśli taki indeks nie istnieje, wynikiem funkcji powinno być -1.
+
+Czyli:
+
+nextInRange(i,[a,b])=min{j≥i:xj∈[a,b]}
+ lub -1 (jeśli taki indeks nie istnieje)
+
+Twój moduł powinien udostępniać następujące funkcje:
+
+void init(const vector<int> &x) – inicjalizacja ciągu X przez wartości wektora x (uwaga! ciąg może zawierać dowolne wartości mieszczące się w typie int)
+
+int nextInRange(int i, int a, int b) – oblicz wartość nextInRange(i, [a, b]). Możesz założyć, że 0≤i<|X|
+ i INT_MIN≤a≤b≤INT_MAX
+.
+
+void done() – zwolnienie całej pamięci używanej do obsługiwania ciągu X.
+
+Deklaracje podanych funkcji znajdują się w pliku next.h. Twoim zadaniem jest zaimplementowanie podanych funkcji w pliku next.cpp.
